@@ -1,0 +1,21 @@
+.sidebar {
+  width: 250px;
+  min-height: 100%;
+  border-right: 2px solid #ffd000;
+}
+
+.nav-link {
+  color: #ffcc00;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  background-color: #ffcc00;
+  color: #000;
+}

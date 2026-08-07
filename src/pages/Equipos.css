@@ -1,0 +1,282 @@
+.page-container {
+  padding: 20px;
+  color: #fff;
+}
+
+.btn-nuevo {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-nuevo:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.tabla-equipos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-equipos th {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.tabla-equipos td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.tabla-equipos tbody tr:nth-child(even) {
+  background-color: #111;
+}
+
+.tabla-equipos tbody tr:hover {
+    background-color: #151515;
+    cursor: pointer;
+}
+.estado {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.disponible {
+  background: #00c853;
+  color: white;
+}
+
+.prestado {
+    background: #ff6d00;
+    color: white;
+}
+
+.mantenimiento {
+    background: #d50000;
+    color: white;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.modal-content {
+  background: #111;
+  color: white;
+
+  width: 500px;
+  max-width: 90%;
+
+  padding: 25px;
+  border-radius: 10px;
+
+  border: 2px solid #ffcc00;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content label {
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #222;
+  color: white;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-guardar {
+  background: #00c853;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background: #d50000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;  
+}
+
+.btn-eliminar {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-ver {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+#etiqueta-print {
+  width: 5cm;
+  height: 3cm;
+
+  background: white;
+  color: black;
+
+  border: 1px solid black;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px auto;
+  padding: 2mm;
+
+  box-sizing: border-box;
+}
+
+#etiqueta-print h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#etiqueta-print p {
+  margin: 2px 0;
+  font-size: 11px;
+}
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  #etiqueta-print,
+  #etiqueta-print * {
+    visibility: visible;
+  }
+
+  #etiqueta-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+  }
+
+}
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  #etiqueta-print,
+  #etiqueta-print * {
+    visibility: visible;
+  }
+
+  #etiqueta-print {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 5cm;
+    height: 3cm;
+
+    margin: 0;
+    padding: 2mm;
+
+    border: 1px solid #000;
+    background: white;
+    color: black;
+  }
+
+}
+#etiqueta-print {
+  width: 5cm;
+  height: 3cm;
+
+  background: white;
+  color: black;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px auto;
+}
+
+#etiqueta-print h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#etiqueta-print p {
+  margin: 5px 0 0;
+  font-size: 12px;
+}

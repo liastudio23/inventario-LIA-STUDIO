@@ -1,0 +1,8 @@
+.header {
+  background-color: #000;   /* Fondo negro */
+  color: #ffcc00;           /* Texto amarillo */
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

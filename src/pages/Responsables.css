@@ -1,0 +1,47 @@
+.page-container {
+  padding: 20px;
+}
+
+.btn-nuevo {
+  margin-bottom: 15px;
+}
+
+.tabla-responsables {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-responsables th,
+.tabla-responsables td {
+  border: 1px solid #030303;
+  padding: 8px;
+}
+
+.btn-editar {
+  margin-right: 5px;
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+}
+
+.btn-eliminar {
+  background-color: #f44336;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 5px;
+}

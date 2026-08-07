@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #111111;
+}
+
+/* =======================
+   LAYOUT
+======================= */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+
+.sidebar {
+  width: 260px;
+  background: #111111;
+  color: white;
+  border-right: 4px solid #ffd100;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo h2 {
+  color: #ffd100;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.menu-item svg {
+  color: #ffd100;
+}
+
+.menu-item:hover {
+  background: #ffd100;
+  color: #111111;
+}
+
+.menu-item:hover svg {
+  color: #111111;
+}
+
+.menu-item.active {
+  background: #ffd100;
+  color: #111111;
+  font-weight: bold;
+}
+
+.menu-item.active svg {
+  color: #111111;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid #333;
+  color: #999;
+  text-align: center;
+}
+
+/* =======================
+   CONTENIDO
+======================= */
+
+.content {
+  flex: 1;
+  background: #181818;
+  color: white;
+}
+
+.header {
+  padding: 25px;
+  border-bottom: 3px solid #ffd100;
+}
+
+.header h1 {
+  color: #ffd100;
+}
+
+/* =======================
+   DASHBOARD
+======================= */
+
+.dashboard {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #242424;
+  border-left: 6px solid #ffd100;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.card h2 {
+  color: #ffd100;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.card p {
+  color: #d1d1d1;
+}
+.page-container {
+  padding: 25px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #ffd100;
+  color: #111;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #e5bd00;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1d1d1d;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table th {
+  background: #ffd100;
+  color: #111;
+  text-align: left;
+  padding: 15px;
+}
+
+.table td {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+.table tr:hover {
+  background: #252525;
+}
+/* =========================
+   PAGINAS
+========================= */
+
+.page-container {
+  padding: 30px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  color: #ffd100;
+}
+
+.btn-primary {
+  background: #ffd100;
+  color: #111;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e3ba00;
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.table-container {
+  background: #1d1d1d;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #ffd100;
+}
+
+.table th {
+  padding: 16px;
+  text-align: left;
+  color: #111;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+
+.table tr:hover {
+  background: #252525;
+}
+
+/* =========================
+   ESTADOS
+========================= */
+
+.estado {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.disponible {
+  background: #16a34a;
+  color: white;
+}
+
+.prestado {
+  background: #f59e0b;
+  color: black;
+}
