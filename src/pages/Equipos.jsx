@@ -366,10 +366,11 @@ export default function Equipos() {
               {equipoDetalle.depreciacion_mensual}
             </p>
 
-            <p>
-              <strong>Costo por Hora:</strong> S/
-              {equipoDetalle.costo_hora}
-            </p>
+ <p>
+  <strong>Costo por Hora:</strong> S/
+  {Number(equipoDetalle.costo_hora || 0).toFixed(4)}
+</p>
+
 
             <div className="modal-actions">
 
