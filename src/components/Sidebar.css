@@ -42,6 +42,13 @@
 
 @media (max-width: 768px) {
 
+  .page-container h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+}
+
   .menu-toggle {
     display: block;
     position: fixed;
@@ -80,7 +87,6 @@
   .sidebar-title {
     font-size: 20px;
   }
-}
 .sidebar-title {
   font-size: 16px !important;
   text-align: center;
@@ -94,4 +100,21 @@
 
 .sidebar {
   width: 220px;
+}
+.sidebar {
+  width: 220px;
+}
+
+.sidebar-title {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 1.2;
+}
+
+.sidebar-logo {
+  width: 70px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
 }
