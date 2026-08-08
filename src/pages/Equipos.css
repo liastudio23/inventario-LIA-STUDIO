@@ -322,3 +322,47 @@
     overflow-y: auto;
   }
 }
+@media (max-width: 768px) {
+
+  .tabla-equipos {
+    min-width: 700px;
+  }
+
+  .tabla-equipos th,
+  .tabla-equipos td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-ver,
+  .btn-editar,
+  .btn-eliminar {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: none;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* NUEVO */
+
+  .page-container h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .tabla-equipos {
+    font-size: 13px;
+  }
+
+  .tabla-equipos th,
+  .tabla-equipos td {
+    padding: 8px;
+  }
+
+}

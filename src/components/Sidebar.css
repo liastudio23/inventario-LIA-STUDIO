@@ -81,3 +81,17 @@
     font-size: 20px;
   }
 }
+.sidebar-title {
+  font-size: 16px !important;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sidebar img {
+  width: 70px;
+  height: auto;
+}
+
+.sidebar {
+  width: 220px;
+}
