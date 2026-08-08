@@ -103,9 +103,10 @@ export default function Equipos() {
         const ultimoNumero = parseInt(ultimoEquipo[0].codigo.split("-")[1]);
         nuevoCodigo = `${tipo}-${String(ultimoNumero + 1).padStart(4, "0")}`;
       }
-
+ 
       const { error } = await supabase
         .from("equipos")
+
         .insert([
           {
             codigo: nuevoCodigo,
@@ -160,9 +161,9 @@ export default function Equipos() {
     setShowDetalle(true);
   };
   const generarQr = (equipo) => {
-  setEquipoQr(equipo);
-  setShowQr(true);
-};
+    setEquipoQr(equipo);
+    setShowQr(true);
+  };
 
   const eliminarEquipo = async (id) => {
     const confirmar = window.confirm("¿Desea eliminar este equipo?");
@@ -289,7 +290,7 @@ export default function Equipos() {
                 <option>MANTENIMIENTO</option>
               </select>
               <button
-           
+
                 className="btn-ver"
                 onClick={() => verEquipo(equipo)}
               >
@@ -372,102 +373,102 @@ export default function Equipos() {
 
             <div className="modal-actions">
 
-  <button
-    className="btn-ver"
-    onClick={() => generarQr(equipoDetalle)}
-  >
-    Generar QR
-  </button>
+              <button
+                className="btn-ver"
+                onClick={() => generarQr(equipoDetalle)}
+              >
+                Generar QR
+              </button>
 
-<div id="etiqueta-print">
+              <div id="etiqueta-print">
 
-  <h3>{equipoDetalle.codigo}</h3>
+                <h3>{equipoDetalle.codigo}</h3>
 
-  <p>
-    {equipoDetalle.marca} {equipoDetalle.modelo}
-  </p>
+                <p>
+                  {equipoDetalle.marca} {equipoDetalle.modelo}
+                </p>
 
-</div>
+              </div>
 
-{/* 
+              {/* 
 <QRCodeCanvas
   value={equipoQr.codigo}
   size={80}
 />
 */}
-</div>
+            </div>
 
-<button
-  style={{
-    background: "red",
-    color: "white",
-    padding: "10px",
-    border: "none",
-    cursor: "pointer"
-  }}
-  onClick={() => setShowDetalle(false)}
->
-  Cerrar
-</button>
-
-</div>
+            <button
+              style={{
+                background: "red",
+                color: "white",
+                padding: "10px",
+                border: "none",
+                cursor: "pointer"
+              }}
+              onClick={() => setShowDetalle(false)}
+            >
+              Cerrar
+            </button>
 
           </div>
+
+        </div>
       )}
       {showQr && equipoQr && (
-  <div className="modal">
-    <div className="modal-content">
+        <div className="modal">
+          <div className="modal-content">
 
-      <h2>QR del Equipo</h2>
+            <h2>QR del Equipo</h2>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          margin: "20px 0"
-        }}
-      >
-        <div
-  style={{
-    background: "white",
-    color: "black",
-    padding: "20px",
-    textAlign: "center",
-    borderRadius: "10px"
-  }}
->
-  <h3>{equipoQr.codigo}</h3>
-  <p>{equipoQr.marca}</p>
-  <p>{equipoQr.modelo}</p>
-</div>
-      </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "20px 0"
+              }}
+            >
+              <div
+                style={{
+                  background: "white",
+                  color: "black",
+                  padding: "20px",
+                  textAlign: "center",
+                  borderRadius: "10px"
+                }}
+              >
+                <h3>{equipoQr.codigo}</h3>
+                <p>{equipoQr.marca}</p>
+                <p>{equipoQr.modelo}</p>
+              </div>
+            </div>
 
-      <p style={{ textAlign: "center" }}>
-        {equipoQr.codigo}
-      </p>
+            <p style={{ textAlign: "center" }}>
+              {equipoQr.codigo}
+            </p>
 
-      <div className="modal-actions">
+            <div className="modal-actions">
 
 
-  <button
-    className="btn-editar"
-    onClick={() => window.print()}
-  >
-    Imprimir
-  </button>
+              <button
+                className="btn-editar"
+                onClick={() => window.print()}
+              >
+                Imprimir
+              </button>
 
-  <button
-    className="btn-cancelar"
-    onClick={() => setShowQr(false)}
-  >
-    Cerrar
-  </button>
+              <button
+                className="btn-cancelar"
+                onClick={() => setShowQr(false)}
+              >
+                Cerrar
+              </button>
 
-</div>
+            </div>
 
-    </div>
-  </div>
-)}
+          </div>
+        </div>
+      )}
 
     </div>
   );
