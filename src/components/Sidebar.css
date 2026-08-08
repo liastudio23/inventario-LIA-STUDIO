@@ -63,13 +63,11 @@
 
   .sidebar {
     position: fixed;
-    left: -250px;
     top: 0;
+    left: -250px;
 
     width: 250px;
     height: 100vh;
-
-    background: #000;
 
     z-index: 1100;
     transition: all 0.3s ease;
@@ -77,5 +75,9 @@
 
   .sidebar.open {
     left: 0;
+  }
+
+  .sidebar-title {
+    font-size: 20px;
   }
 }

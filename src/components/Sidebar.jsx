@@ -8,7 +8,7 @@ import {
   FaSignOutAlt,
   FaUndo,
   FaTools,
-  FaChartBar
+  FaChartBar,
 } from "react-icons/fa";
 
 import "./Sidebar.css";
@@ -26,54 +26,86 @@ function Sidebar() {
       </button>
 
       <aside className={`sidebar ${menuOpen ? "open" : ""}`}>
-        <h2 className="sidebar-title">Gestión</h2>
+        <h2 className="sidebar-title">🎬 Inventario Audiovisual</h2>
 
         <nav>
           <ul>
             <li>
-              <NavLink to="/" className="nav-link">
+              <NavLink
+                to="/"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaHome /> Panel
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/equipos" className="nav-link">
+              <NavLink
+                to="/equipos"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaBox /> Equipos
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/responsables" className="nav-link">
+              <NavLink
+                to="/responsables"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaUsers /> Responsables
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/proyectos" className="nav-link">
+              <NavLink
+                to="/proyectos"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaProjectDiagram /> Proyectos
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/salidas" className="nav-link">
+              <NavLink
+                to="/salidas"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaSignOutAlt /> Salidas
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/devoluciones" className="nav-link">
+              <NavLink
+                to="/devoluciones"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaUndo /> Devoluciones
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/mantenimiento" className="nav-link">
+              <NavLink
+                to="/mantenimiento"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaTools /> Mantenimiento
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/reportes" className="nav-link">
+              <NavLink
+                to="/reportes"
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
                 <FaChartBar /> Reportes
               </NavLink>
             </li>
