@@ -89,6 +89,7 @@ export default function Equipos() {
       const costoHora =
         (Number(costoCompra) - valorResidual) /
         Number(horasVidaUtil);
+        console.log("Costo Hora:", costoHora);
 
       const { data: ultimoEquipo } = await supabase
         .from("equipos")
@@ -103,7 +104,17 @@ export default function Equipos() {
         const ultimoNumero = parseInt(ultimoEquipo[0].codigo.split("-")[1]);
         nuevoCodigo = `${tipo}-${String(ultimoNumero + 1).padStart(4, "0")}`;
       }
- 
+console.log({
+  costoHora,
+  costo_hora: String(costoHora),
+});
+console.log({
+  costoHora,
+  tipoCostoHora: typeof costoHora,
+  costoCompra,
+  valorResidual,
+  horasVidaUtil,
+});
       const { error } = await supabase
         .from("equipos")
 
@@ -366,10 +377,10 @@ export default function Equipos() {
               {equipoDetalle.depreciacion_mensual}
             </p>
 
- <p>
-  <strong>Costo por Hora:</strong> S/
-  {Number(equipoDetalle.costo_hora || 0).toFixed(4)}
-</p>
+            <p>
+              <strong>Costo por Hora:</strong> S/
+              {Number(equipoDetalle.costo_hora || 0).toFixed(4)}
+            </p>
 
 
             <div className="modal-actions">
